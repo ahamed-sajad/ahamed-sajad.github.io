@@ -4,7 +4,7 @@
 window.addEventListener('load', () => {
   const loadingScreen = document.getElementById('loadingScreen');
   
-  // Show loading screen for 2 seconds
+  // Show loading screen for 1 second
   setTimeout(() => {
     loadingScreen.classList.add('hidden');
     
@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       loadingScreen.remove();
     }, 600);
-  }, 2000);
+  }, 1000);
 });
 
 // Prevent scrolling during loading
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   setTimeout(() => {
     document.body.style.overflow = '';
-  }, 2600);
+  }, 1600);
 });
 
 // ------------------------------
