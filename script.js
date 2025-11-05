@@ -1,4 +1,30 @@
 // ------------------------------
+// LOADING SCREEN
+// ------------------------------
+window.addEventListener('load', () => {
+  const loadingScreen = document.getElementById('loadingScreen');
+  
+  // Show loading screen for 2 seconds
+  setTimeout(() => {
+    loadingScreen.classList.add('hidden');
+    
+    // Remove from DOM after fade-out
+    setTimeout(() => {
+      loadingScreen.remove();
+    }, 600);
+  }, 2000);
+});
+
+// Prevent scrolling during loading
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.style.overflow = 'hidden';
+  
+  setTimeout(() => {
+    document.body.style.overflow = '';
+  }, 2600);
+});
+
+// ------------------------------
 // NAV: hamburger open/close
 // ------------------------------
 document.addEventListener('DOMContentLoaded', () => {
