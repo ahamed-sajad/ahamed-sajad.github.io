@@ -1534,10 +1534,8 @@ html{
 .edu-image {
   flex: 1.2; /* give it more space */
   display: flex;
-  justify-content: flex-start;        /* move image to the left */
+  justify-content: center;
   align-items: center;
-  padding-left: 0;                    /* remove any left padding */
-  margin-left: -120px;                /* shift image significantly to the left */
 }
 
 .edu-image img {
