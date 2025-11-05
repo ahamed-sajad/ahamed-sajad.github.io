@@ -303,15 +303,16 @@ html{
     max-width: 92%;
     margin: 0 auto;
     border-radius: 26px;
-    padding: 14px 16px;
+    padding: 18px 20px 14px;           /* reduced padding */
   }
   .cta-text {
     font-size: 14px;
-    line-height: 1.35;
+    line-height: 1.3;                  /* tighter line height */
+    margin-bottom: 8px;                /* small gap between text and button */
   }
   .cta-btn {
-    margin-top: 4px !important;
-    padding: 8px 16px;
+    margin-top: 0 !important;          /* remove negative margin */
+    padding: 10px 20px;
     font-size: 11px;
   }
 
@@ -550,16 +551,16 @@ html{
 /* ===== MOBILE HORIZONTAL BADGE (IMAGE RIGHT + EVEN SPACING) ===== */
 @media (max-width: 576px) {
   .mobile-profile-badge {
-    flex-direction: row-reverse;       /* image on right */
-    justify-content: space-between;
+    flex-direction: row;               /* icons on left, image on right */
+    justify-content: center;           /* center everything */
     align-items: center;
-    width: 95%;                        /* responsive width instead of fixed 380px */
-    max-width: 380px;                  /* max width for larger phones */
+    width: 95%;
+    max-width: 380px;
     height: 90px;
     border-radius: 60px;
     background: #145b73;
-    padding: 0 28px 0 20px;            /* balanced left/right padding */
-    gap: 24px;                         /* spacing between icons and image */
+    padding: 0 20px;                   /* equal padding */
+    gap: 20px;                         /* space between icons and image */
     margin: 14px auto 18px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
@@ -572,14 +573,16 @@ html{
     border: 3px solid #e3e7ea;
     object-fit: cover;
     box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    order: 2;                          /* image on right */
   }
 
   .mobile-social-icons {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center;           /* center icons */
     align-items: center;
-    gap: 18px;                         /* even space between icons */
-    flex-grow: 1;                      /* center icons nicely */
+    gap: 16px;
+    order: 1;                          /* icons on left */
   }
 
   .mobile-social-icons a {
