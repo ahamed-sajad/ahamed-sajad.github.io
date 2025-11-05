@@ -1537,7 +1537,7 @@ html{
   justify-content: flex-start;        /* move image to the left */
   align-items: center;
   padding-left: 0;                    /* remove any left padding */
-  margin-left: -30px;                 /* shift image left */
+  margin-left: -80px;                 /* shift image more to the left */
 }
 
 .edu-image img {
