@@ -364,9 +364,171 @@
 </section>
 
 
+<!-- ===== PROJECTS SECTION ===== -->
+<section class="projects-section" id="projects">
+  <div class="projects-container">
+    <h2 class="projects-title">Projects</h2>
+    
+    <!-- Category Tabs -->
+    <div class="project-tabs">
+      <button class="tab-btn active" data-category="uiux">UI/UX Design</button>
+      <button class="tab-btn" data-category="graphic">Graphic Design</button>
+      <button class="tab-btn" data-category="web">Web Development</button>
+    </div>
 
+    <!-- UI/UX Projects Grid -->
+    <div class="projects-grid" id="uiux-projects">
+      <div class="project-card" data-image="project-uiux-1.jpg">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/36d1dc/ffffff?text=UI+Project+1" alt="UI/UX Project 1">
+          <div class="project-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Mobile App Design</h3>
+          <p>E-commerce iOS Application</p>
+        </div>
+      </div>
 
+      <div class="project-card" data-image="project-uiux-2.jpg">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/5b86e5/ffffff?text=UI+Project+2" alt="UI/UX Project 2">
+          <div class="project-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Dashboard Interface</h3>
+          <p>Analytics Web Dashboard</p>
+        </div>
+      </div>
 
+      <div class="project-card" data-image="project-uiux-3.jpg">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/7f5af0/ffffff?text=UI+Project+3" alt="UI/UX Project 3">
+          <div class="project-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Travel Booking App</h3>
+          <p>Mobile & Web Experience</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-image="project-uiux-4.jpg">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/ff8c42/ffffff?text=UI+Project+4" alt="UI/UX Project 4">
+          <div class="project-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Food Delivery UI</h3>
+          <p>Restaurant Ordering System</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graphic Design Projects Grid -->
+    <div class="projects-grid hidden" id="graphic-projects">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/ff5959/ffffff?text=Graphic+1" alt="Graphic Design 1">
+        </div>
+        <div class="project-info">
+          <h3>Brand Identity</h3>
+          <p>Complete Logo & Brand Guide</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/3eb3ff/ffffff?text=Graphic+2" alt="Graphic Design 2">
+        </div>
+        <div class="project-info">
+          <h3>Social Media Pack</h3>
+          <p>Instagram & Facebook Templates</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/f3ae18/ffffff?text=Graphic+3" alt="Graphic Design 3">
+        </div>
+        <div class="project-info">
+          <h3>Poster Design</h3>
+          <p>Event Marketing Materials</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/1c8aa0/ffffff?text=Graphic+4" alt="Graphic Design 4">
+        </div>
+        <div class="project-info">
+          <h3>Packaging Design</h3>
+          <p>Product Label & Box Design</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web Development Projects Grid -->
+    <div class="projects-grid hidden" id="web-projects">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/0a3c50/ffffff?text=Web+Project+1" alt="Web Development 1">
+        </div>
+        <div class="project-info">
+          <h3>E-Commerce Website</h3>
+          <p>Full-stack Shopping Platform</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/176d80/ffffff?text=Web+Project+2" alt="Web Development 2">
+        </div>
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>Personal Brand Showcase</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/145b73/ffffff?text=Web+Project+3" alt="Web Development 3">
+        </div>
+        <div class="project-info">
+          <h3>Business Landing Page</h3>
+          <p>Corporate Web Presence</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/400x300/0e5b6b/ffffff?text=Web+Project+4" alt="Web Development 4">
+        </div>
+        <div class="project-info">
+          <h3>Blog Platform</h3>
+          <p>Content Management System</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Modal for UI/UX Projects -->
+<div class="image-modal" id="imageModal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Close modal">
+      <i class="fas fa-times"></i>
+    </button>
+    <img src="" alt="Project Full View" class="modal-image">
+  </div>
+</div>
 
 
 </body>

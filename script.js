@@ -136,4 +136,86 @@ document.addEventListener('DOMContentLoaded', () => {
       else showAll();
     });
   })();
+
+  // ------------------------------
+  // PROJECTS: Tab Switching
+  // ------------------------------
+  (function () {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const uiuxGrid = document.getElementById('uiux-projects');
+    const graphicGrid = document.getElementById('graphic-projects');
+    const webGrid = document.getElementById('web-projects');
+
+    if (!tabs.length) return;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        // Add active to clicked tab
+        tab.classList.add('active');
+
+        // Get category
+        const category = tab.getAttribute('data-category');
+
+        // Hide all grids
+        uiuxGrid?.classList.add('hidden');
+        graphicGrid?.classList.add('hidden');
+        webGrid?.classList.add('hidden');
+
+        // Show selected grid
+        if (category === 'uiux') {
+          uiuxGrid?.classList.remove('hidden');
+        } else if (category === 'graphic') {
+          graphicGrid?.classList.remove('hidden');
+        } else if (category === 'web') {
+          webGrid?.classList.remove('hidden');
+        }
+      });
+    });
+  })();
+
+  // ------------------------------
+  // IMAGE MODAL: UI/UX Projects
+  // ------------------------------
+  (function () {
+    const modal = document.getElementById('imageModal');
+    const modalImage = modal?.querySelector('.modal-image');
+    const closeBtn = modal?.querySelector('.modal-close');
+    const overlay = modal?.querySelector('.modal-overlay');
+    const uiuxCards = document.querySelectorAll('#uiux-projects .project-card');
+
+    if (!modal || !modalImage) return;
+
+    // Open modal when clicking UI/UX cards
+    uiuxCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('.project-image img');
+        if (img) {
+          modalImage.src = img.src;
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Prevent background scroll
+        }
+      });
+    });
+
+    // Close modal
+    const closeModal = () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = ''; // Restore scroll
+      setTimeout(() => {
+        modalImage.src = '';
+      }, 300);
+    };
+
+    closeBtn?.addEventListener('click', closeModal);
+    overlay?.addEventListener('click', closeModal);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  })();
 });
