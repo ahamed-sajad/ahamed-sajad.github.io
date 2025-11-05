@@ -1850,6 +1850,10 @@ html{
   cursor: pointer;
 }
 
+.project-card.hidden-project {
+  display: none;
+}
+
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
@@ -1916,6 +1920,41 @@ html{
   font-size: 14px;
   color: #6b7a89;
   line-height: 1.5;
+}
+
+/* ===== PROJECTS CTA BUTTON ===== */
+.projects-cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.projects-cta.hidden {
+  display: none;
+}
+
+.view-all-projects {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #176d80, #0a3c50);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(23, 109, 128, 0.3);
+}
+
+.view-all-projects:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(23, 109, 128, 0.4);
+  background: linear-gradient(135deg, #1c8aa0, #0e5563);
+}
+
+.view-all-projects:active {
+  transform: translateY(-1px);
 }
 
 /* ===== IMAGE MODAL ===== */

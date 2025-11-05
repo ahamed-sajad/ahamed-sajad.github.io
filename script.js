@@ -142,8 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------
   (function () {
     const tabs = document.querySelectorAll('.tab-btn');
+    const uiuxGrid = document.getElementById('uiux-projects');
     const graphicGrid = document.getElementById('graphic-projects');
     const webGrid = document.getElementById('web-projects');
+    const uiuxCta = document.getElementById('uiux-cta');
 
     if (!tabs.length) return;
 
@@ -157,17 +159,58 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get category
         const category = tab.getAttribute('data-category');
 
-        // Hide all grids
+        // Hide all grids and CTAs
+        uiuxGrid?.classList.add('hidden');
         graphicGrid?.classList.add('hidden');
         webGrid?.classList.add('hidden');
+        uiuxCta?.classList.add('hidden');
 
         // Show selected grid
-        if (category === 'graphic') {
+        if (category === 'uiux') {
+          uiuxGrid?.classList.remove('hidden');
+          uiuxCta?.classList.remove('hidden');
+        } else if (category === 'graphic') {
           graphicGrid?.classList.remove('hidden');
         } else if (category === 'web') {
           webGrid?.classList.remove('hidden');
         }
       });
+    });
+  })();
+
+  // ------------------------------
+  // UI/UX: View All Projects Toggle
+  // ------------------------------
+  (function () {
+    const btn = document.getElementById('viewAllUiux');
+    const hiddenProjects = document.querySelectorAll('#uiux-projects .hidden-project');
+    
+    if (!btn || hiddenProjects.length === 0) return;
+
+    let expanded = false;
+
+    btn.addEventListener('click', () => {
+      if (expanded) {
+        // Hide extra projects
+        hiddenProjects.forEach(card => {
+          card.classList.add('hidden-project');
+        });
+        btn.textContent = 'View All Projects';
+        expanded = false;
+
+        // Scroll to projects section
+        const projectsSection = document.querySelector('.projects-section');
+        if (projectsSection) {
+          projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else {
+        // Show all projects
+        hiddenProjects.forEach(card => {
+          card.classList.remove('hidden-project');
+        });
+        btn.textContent = 'Show Less';
+        expanded = true;
+      }
     });
   })();
 
