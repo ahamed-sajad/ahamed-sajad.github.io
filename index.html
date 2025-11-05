@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sajad Ahamed</title>
+
+  <!-- CSS & JS -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+
+    <nav class="nav-links" id="mainNav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Our Services</a>
+      <a href="#">Who We Are</a>
+      <a href="#">Work</a>
+      <a href="#">Contact</a>
+      <a href="#" class="btn nav-cta-mobile">Consultation →</a>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="#" class="btn nav-cta-desktop">Consultation →</a>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>Hello! I'm Sajad Ahamed</h1>
+    <p>Software Engineer &amp; UI/UX Designer</p>
+
+    <!-- Dashed arrow image -->
+    <img src="line.png" alt="Arrow Line" class="hero-arrow-img">
+
+    <!-- Hero images -->
+    <div class="hero-images">
+      <div class="image-box left">
+        <img src="2.png" alt="Tech Marketing Image">
+      </div>
+      <div class="image-box right">
+        <img src="1.png" alt="AI Concept Image">
+      </div>
+    </div>
+
+    <!-- Mobile oval badge (shown only on mobile via CSS) -->
+    <div class="mobile-profile-badge">
+      <img src="Sajad.png" alt="Sajad" class="mobile-exp-img">
+      <div class="mobile-social-icons">
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:youremail@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/94771234567" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Yellow CTA card -->
+    <div class="cta-wrap">
+      <div class="cta-shell">
+        <div class="cta-card">
+          <p class="cta-text">
+            Want to know more about my work, experience, and the journey that shaped my career?
+          </p>
+          <a href="#contact" class="cta-btn"><span>Download CV</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop badge (hidden on mobile via CSS) -->
+    <div class="experience-badge clean-badge">
+      <img src="Sajad.png" alt="Profile" class="exp-img">
+      <div class="social-icons">
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:youremail@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/94771234567" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+<section class="about reveal" id="about">
+  <div class="about-divider"></div>
+
+  <div class="about-inner">
+    <div class="about-left">
+      <h2>Who I Am<br>Beyond Code</h2>
+    </div>
+
+    <div class="about-right">
+      <p>
+        Passionate IT professional with a BSc in Software Engineering and experience across various IT tasks.
+        Adaptable and enthusiastic, I work well in dynamic environments and enjoy contributing to innovative projects.
+        I’m constantly exploring emerging technologies and creative solutions to enhance digital experiences.
+        With a strong interest in design, automation, and user-focused development, I aim to bridge the gap between
+        technology and creativity while delivering meaningful results.
+      </p>
+      <a href="#" class="about-link">Let’s Work Together</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES SECTION ===== -->
+<section class="services reveal" id="services">
+  <div class="services-inner">
+    <!-- 6 cards total -->
+    <div class="service-card">
+      <div class="svc-icon"><i class="fa-solid fa-code"></i></div>
+      <h3>Web<br>Development</h3>
+      <p>Modern, fast, and secure websites and web apps built with clean code, SEO best practices, and scalable architectures.</p>
+      <a href="#" class="get-link">Get a Service</a>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+      <h3>UI/UX<br>Design</h3>
+      <p>Human-centered interfaces, wireframes, and prototypes that improve usability and deliver delightful product experiences.</p>
+      <a href="#" class="get-link">Get a Service</a>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon"><i class="fa-solid fa-bullhorn"></i></div>
+      <h3>Digital<br>Marketing</h3>
+      <p>Performance-driven campaigns across social, search, and email to grow traffic, capture leads, and boost conversions.</p>
+      <a href="#" class="get-link">Get a Service</a>
+    </div>
+
+    <div class="service-card hidden">
+      <div class="svc-icon"><i class="fa-solid fa-palette"></i></div>
+      <h3>Graphic<br>Design</h3>
+      <p>Logos, brand kits, and visual assets that keep your brand consistent and memorable across all touchpoints.</p>
+      <a href="#" class="get-link">Get a Service</a>
+    </div>
+
+    <div class="service-card hidden">
+      <div class="svc-icon"><i class="fa-solid fa-film"></i></div>
+      <h3>Video<br>Editing</h3>
+      <p>Snappy edits, motion graphics, and short-form content optimized for social media and marketing campaigns.</p>
+      <a href="#" class="get-link">Get a Service</a>
+    </div>
+
+    <div class="service-card hidden">
+      <div class="svc-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+      <h3>IT<br>Services</h3>
+      <p>Systems setup, troubleshooting, automation, and tech support to keep your operations running smoothly.</p>
+      <a href="#" class="get-link">Get a Service</a>
+    </div>
+  </div>
+
+  <!-- View All CTA -->
+  <div class="services-cta">
+    <button id="viewAllBtn" class="btn view-all">View All Services</button>
+  </div>
+</section>
+
+
+
+<!-- ===== VIDEO SECTION ===== -->
+<section class="showreel reveal" id="showreel">
+  <div class="video-frame">
+    <video autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+
+
+<!-- ===== WORK EXPERIENCE SECTION ===== -->
+<section class="exp-spotlight" id="experience">
+  <div class="exp-wrap">
+
+    <!-- FEATURE CARD -->
+    <article class="exp-feature">
+      <span class="eyebrow">WORK EXPERIENCE</span>
+      <h3 class="feature-title">
+        Where I’ve Built & Grown
+      </h3>
+      <p class="feature-note">
+        From early projects to professional roles, each step has strengthened my technical foundation, creativity, and confidence to take on new challenges with purpose.
+      </p>
+    </article>
+
+    <!-- CARD 1 - Company -->
+    <article class="exp-card">
+      <div class="exp-icon company"><i class="fa-solid fa-building"></i></div>
+      <h4 class="exp-role">UI/UX Designer</h4>
+      <p class="exp-meta">Adwello - Finland | <span>2025 - Present</span></p>
+      <p class="exp-desc">
+        Designed user-centered interfaces and prototypes; collaborated with stakeholders
+        to iterate quickly and enhance usability.
+      </p>
+    </article>
+
+    <!-- CARD 2 - Company -->
+    <article class="exp-card">
+      <div class="exp-icon company"><i class="fa-solid fa-building"></i></div>
+      <h4 class="exp-role">UI/UX & Creative Designer</h4>
+      <p class="exp-meta">Bootyard - Philippines | <span>2024 - 2025</span></p>
+      <p class="exp-desc">
+        Contributed to responsive, user-focused designs and collaborated with
+        cross-functional teams to deliver polished experiences.
+      </p>
+    </article>
+
+    <!-- CARD 3 - Freelance -->
+    <article class="exp-card">
+      <div class="exp-icon freelance"><i class="fa-solid fa-briefcase"></i></div>
+      <h4 class="exp-role">Website & Online Store Management</h4>
+      <p class="exp-meta">Freelance | <span>2024 - Present</span></p>
+      <p class="exp-desc">
+        Managed and updated websites for small businesses. Uploaded products,
+        descriptions, and maintained inventory records.
+      </p>
+    </article>
+
+    <!-- CARD 4 - Freelance -->
+    <article class="exp-card">
+      <div class="exp-icon freelance"><i class="fa-solid fa-briefcase"></i></div>
+      <h4 class="exp-role">Data Entry</h4>
+      <p class="exp-meta">Freelance | <span>2022 - Present</span></p>
+      <p class="exp-desc">
+        Maintained accurate client data and correspondence. Scheduled client meetings using digital tools.
+      </p>
+    </article>
+
+    <!-- CARD 5 - Freelance -->
+    <article class="exp-card">
+      <div class="exp-icon freelance"><i class="fa-solid fa-briefcase"></i></div>
+      <h4 class="exp-role">Social Media & Graphic Design</h4>
+      <p class="exp-meta">Freelance | <span>2020 - Present</span></p>
+      <p class="exp-desc">
+        Managed pages, designed promotional visuals, and supported small businesses with
+        creative content for growth.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ===== EDUCATION SECTION ===== -->
+<section class="education-section" id="education">
+  <div class="edu-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="edu-image">
+      <img src="3.png" alt="Education Image">
+    </div>
+í
+    <!-- RIGHT EDUCATION LIST -->
+    <div class="edu-content">
+      <h2 class="edu-title">Education</h2>
+
+      <!-- 1 -->
+      <article class="edu-card">
+        <div class="edu-icon purple"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="edu-info">
+          <h3>BSc (Hons) in Software Engineering</h3>
+          <p>Cardiff Metropolitan University — 2024–2025</p>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="edu-card">
+        <div class="edu-icon orange"><i class="fa-solid fa-laptop-file"></i></div>
+        <div class="edu-info">
+          <h3>HND in Computing & Software Engineering</h3>
+          <p>Cardiff Metropolitan University — 2022–2024</p>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="edu-card">
+        <div class="edu-icon blue"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="edu-info">
+          <h3>Diploma in Digital Marketing</h3>
+          <p>ICBT Campus — 2025–2026</p>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="edu-card">
+        <div class="edu-icon red"><i class="fa-solid fa-book"></i></div>
+        <div class="edu-info">
+          <h3>Diploma in IT & English</h3>
+          <p>ICBT Campus — 2021–2022</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+</body>
+</html>
