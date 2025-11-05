@@ -753,6 +753,23 @@ html{
   letter-spacing: 0.2px;
 }
 
+/* Typing Animation for About Section */
+.typing-animation-about {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing-about 3s steps(20) 0.5s forwards;
+}
+
+@keyframes typing-about {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .eyebrow {
   display: inline-block;
   font-size: 12px;
