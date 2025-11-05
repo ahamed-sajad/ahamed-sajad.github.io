@@ -142,10 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------
   (function () {
     const tabs = document.querySelectorAll('.tab-btn');
-    const uiuxGrid = document.getElementById('uiux-projects');
     const graphicGrid = document.getElementById('graphic-projects');
     const webGrid = document.getElementById('web-projects');
-    const uiuxCta = document.getElementById('uiux-cta');
+    const webCta = document.getElementById('web-cta');
 
     if (!tabs.length) return;
 
@@ -160,30 +159,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const category = tab.getAttribute('data-category');
 
         // Hide all grids and CTAs
-        uiuxGrid?.classList.add('hidden');
         graphicGrid?.classList.add('hidden');
         webGrid?.classList.add('hidden');
-        uiuxCta?.classList.add('hidden');
+        webCta?.classList.add('hidden');
 
         // Show selected grid
-        if (category === 'uiux') {
-          uiuxGrid?.classList.remove('hidden');
-          uiuxCta?.classList.remove('hidden');
-        } else if (category === 'graphic') {
+        if (category === 'graphic') {
           graphicGrid?.classList.remove('hidden');
         } else if (category === 'web') {
           webGrid?.classList.remove('hidden');
+          webCta?.classList.remove('hidden');
         }
       });
     });
   })();
 
   // ------------------------------
-  // UI/UX: View All Projects Toggle
+  // WEB DEVELOPMENT: View All Projects Toggle
   // ------------------------------
   (function () {
-    const btn = document.getElementById('viewAllUiux');
-    const hiddenProjects = document.querySelectorAll('#uiux-projects .hidden-project');
+    const btn = document.getElementById('viewAllWeb');
+    const hiddenProjects = document.querySelectorAll('#web-projects .hidden-project');
     
     if (!btn || hiddenProjects.length === 0) return;
 
