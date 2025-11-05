@@ -2410,6 +2410,7 @@ html{
 .contact-social-links {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .contact-social-links a {
