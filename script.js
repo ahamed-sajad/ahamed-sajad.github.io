@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------
   (function () {
     const tabs = document.querySelectorAll('.tab-btn');
-    const uiuxGrid = document.getElementById('uiux-projects');
     const graphicGrid = document.getElementById('graphic-projects');
     const webGrid = document.getElementById('web-projects');
 
@@ -159,14 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const category = tab.getAttribute('data-category');
 
         // Hide all grids
-        uiuxGrid?.classList.add('hidden');
         graphicGrid?.classList.add('hidden');
         webGrid?.classList.add('hidden');
 
         // Show selected grid
-        if (category === 'uiux') {
-          uiuxGrid?.classList.remove('hidden');
-        } else if (category === 'graphic') {
+        if (category === 'graphic') {
           graphicGrid?.classList.remove('hidden');
         } else if (category === 'web') {
           webGrid?.classList.remove('hidden');
@@ -176,19 +172,19 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // ------------------------------
-  // IMAGE MODAL: UI/UX Projects
+  // IMAGE MODAL: All Project Cards
   // ------------------------------
   (function () {
     const modal = document.getElementById('imageModal');
     const modalImage = modal?.querySelector('.modal-image');
     const closeBtn = modal?.querySelector('.modal-close');
     const overlay = modal?.querySelector('.modal-overlay');
-    const uiuxCards = document.querySelectorAll('#uiux-projects .project-card');
+    const allProjectCards = document.querySelectorAll('.project-card');
 
     if (!modal || !modalImage) return;
 
-    // Open modal when clicking UI/UX cards
-    uiuxCards.forEach(card => {
+    // Open modal when clicking any project card
+    allProjectCards.forEach(card => {
       card.addEventListener('click', () => {
         const img = card.querySelector('.project-image img');
         if (img) {
