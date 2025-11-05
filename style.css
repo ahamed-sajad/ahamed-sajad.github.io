@@ -755,10 +755,24 @@ html{
 
 /* Typing Animation for About Section */
 .typing-animation-about {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing-about 3s steps(20) 0.5s forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: none;
+}
+
+.typing-animation-about.start-typing {
+  animation: fadeSlideUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes typing-about {

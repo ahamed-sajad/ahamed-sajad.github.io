@@ -86,6 +86,25 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // ------------------------------
+  // Typing Animation on Scroll for About Section
+  // ------------------------------
+  (function () {
+    const typingElement = document.querySelector('.typing-animation-about');
+    if (!typingElement || !('IntersectionObserver' in window)) return;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          typingElement.classList.add('start-typing');
+          io.unobserve(typingElement);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    io.observe(typingElement);
+  })();
+
+  // ------------------------------
   // Reveal on scroll for timeline (.reveal-left / .reveal-right)
   // ------------------------------
   (function () {
