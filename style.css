@@ -2056,6 +2056,17 @@ html{
     gap: 24px;
   }
 
+  .projects-cta {
+    margin-top: 35px;
+  }
+
+  .view-all-projects {
+    font-size: 14px;
+    padding: 12px 32px;
+    width: 100%;
+    max-width: 280px;
+  }
+
   .modal-close {
     top: -45px;
     width: 40px;
