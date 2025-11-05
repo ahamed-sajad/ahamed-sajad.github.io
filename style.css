@@ -130,11 +130,10 @@ html{
 /* Typing Animation */
 .typing-animation {
   overflow: hidden;
-  border-right: 3px solid #176d80;
   white-space: nowrap;
   margin: 0 auto;
   width: 0;
-  animation: typing 3s steps(25) 0.5s forwards, blink 0.75s step-end infinite;
+  animation: typing 3s steps(25) 0.5s forwards;
 }
 
 @keyframes typing {
@@ -143,15 +142,6 @@ html{
   }
   to {
     width: 100%;
-  }
-}
-
-@keyframes blink {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #176d80;
   }
 }
 
