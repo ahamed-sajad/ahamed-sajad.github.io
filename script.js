@@ -320,50 +320,9 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // ------------------------------
-  // CONTACT FORM SUBMISSION
+  // CONTACT FORM - FormSubmit Integration
   // ------------------------------
-  (function () {
-    const form = document.getElementById('contactForm');
-    
-    if (!form) return;
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const submitBtn = form.querySelector('.submit-btn');
-      const originalText = submitBtn.innerHTML;
-      
-      // Show loading state
-      submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
-      submitBtn.disabled = true;
-      
-      // Get form data
-      const formData = {
-        name: form.querySelector('#name').value,
-        email: form.querySelector('#email').value,
-        subject: form.querySelector('#subject').value,
-        message: form.querySelector('#message').value
-      };
-      
-      // Simulate form submission (replace with actual API call)
-      setTimeout(() => {
-        // Success
-        submitBtn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
-        submitBtn.style.background = 'linear-gradient(135deg, #2ecc71, #27ae60)';
-        
-        // Reset form
-        form.reset();
-        
-        // Reset button after 3 seconds
-        setTimeout(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.style.background = '';
-          submitBtn.disabled = false;
-        }, 3000);
-        
-        // You can add your actual form submission logic here
-        console.log('Form data:', formData);
-      }, 2000);
-    });
-  })();
+  // Form is now handled by FormSubmit.co
+  // No JavaScript needed - form submits directly
+  // Emails will be sent to mr.sajadahamed@gmail.com
 });
