@@ -145,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const graphicGrid = document.getElementById('graphic-projects');
     const webGrid = document.getElementById('web-projects');
     const webCta = document.getElementById('web-cta');
+    const graphicCta = document.getElementById('graphic-cta');
 
     if (!tabs.length) return;
 
@@ -162,10 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
         graphicGrid?.classList.add('hidden');
         webGrid?.classList.add('hidden');
         webCta?.classList.add('hidden');
+        graphicCta?.classList.add('hidden');
 
         // Show selected grid
         if (category === 'graphic') {
           graphicGrid?.classList.remove('hidden');
+          graphicCta?.classList.remove('hidden');
         } else if (category === 'web') {
           webGrid?.classList.remove('hidden');
           webCta?.classList.remove('hidden');
@@ -180,6 +183,42 @@ document.addEventListener('DOMContentLoaded', () => {
   (function () {
     const btn = document.getElementById('viewAllWeb');
     const hiddenProjects = document.querySelectorAll('#web-projects .hidden-project');
+    
+    if (!btn || hiddenProjects.length === 0) return;
+
+    let expanded = false;
+
+    btn.addEventListener('click', () => {
+      if (expanded) {
+        // Hide extra projects
+        hiddenProjects.forEach(card => {
+          card.classList.add('hidden-project');
+        });
+        btn.textContent = 'View All Projects';
+        expanded = false;
+
+        // Scroll to projects section
+        const projectsSection = document.querySelector('.projects-section');
+        if (projectsSection) {
+          projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else {
+        // Show all projects
+        hiddenProjects.forEach(card => {
+          card.classList.remove('hidden-project');
+        });
+        btn.textContent = 'Show Less';
+        expanded = true;
+      }
+    });
+  })();
+
+  // ------------------------------
+  // GRAPHIC DESIGN: View All Projects Toggle
+  // ------------------------------
+  (function () {
+    const btn = document.getElementById('viewAllGraphic');
+    const hiddenProjects = document.querySelectorAll('#graphic-projects .hidden-project');
     
     if (!btn || hiddenProjects.length === 0) return;
 
