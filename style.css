@@ -42,13 +42,6 @@ html{
   scroll-behavior: smooth;
 }
 
-/* ===== HEADING ANIMATIONS ===== */
-h1, h2, h3, h4, h5, h6 {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
 /* ===== LOADING SCREEN ===== */
 .loading-screen {
   position: fixed;
