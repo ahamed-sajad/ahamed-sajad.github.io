@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // ------------------------------
-  // WEB DEVELOPMENT: View All Projects Toggle
+  // WEB DEVELOPMENT: View All Projects Toggle with Lazy Loading
   // ------------------------------
   (function () {
     const btn = document.getElementById('viewAllWeb');
@@ -303,9 +303,15 @@ document.addEventListener('DOMContentLoaded', () => {
           projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       } else {
-        // Show all projects
+        // Show all projects and load images
         hiddenProjects.forEach(card => {
           card.classList.remove('hidden-project');
+          // Load images that haven't been loaded yet
+          const img = card.querySelector('img[data-src]');
+          if (img) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+          }
         });
         btn.textContent = 'Show Less';
         expanded = true;
@@ -314,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // ------------------------------
-  // GRAPHIC DESIGN: View All Projects Toggle
+  // GRAPHIC DESIGN: View All Projects Toggle with Lazy Loading
   // ------------------------------
   (function () {
     const btn = document.getElementById('viewAllGraphic');
@@ -339,9 +345,15 @@ document.addEventListener('DOMContentLoaded', () => {
           projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       } else {
-        // Show all projects
+        // Show all projects and load images
         hiddenProjects.forEach(card => {
           card.classList.remove('hidden-project');
+          // Load images that haven't been loaded yet
+          const img = card.querySelector('img[data-src]');
+          if (img) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+          }
         });
         btn.textContent = 'Show Less';
         expanded = true;
