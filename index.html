@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sajad Ahamed</title>
+  <title>Sajad Ahamed - Software Engineer & UI/UX Designer</title>
+  
+  <!-- Performance & SEO -->
+  <meta name="description" content="Sajad Ahamed - Professional Software Engineer and UI/UX Designer specializing in web development, digital marketing, and graphic design.">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Preconnect to external domains for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
   <!-- CSS & JS -->
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 
-  <!-- Fonts & Icons -->
+  <!-- Fonts & Icons with display=swap for faster rendering -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -21,6 +30,7 @@
       <div class="logo-container">
         <img src="sajadahamed.png" alt="Sajad Ahamed Logo" class="loading-logo">
       </div>
+      <div class="spinner"></div>
     </div>
   </div>
 
@@ -58,21 +68,21 @@
     <!-- Hero images -->
     <div class="hero-images">
       <div class="image-box left">
-        <img src="2.png" alt="Tech Marketing Image">
+        <img src="2.png" alt="Tech Marketing Image" loading="lazy">
       </div>
       <div class="image-box right">
-        <img src="1.png" alt="AI Concept Image">
+        <img src="1.png" alt="AI Concept Image" loading="lazy">
       </div>
     </div>
 
     <!-- Mobile oval badge (shown only on mobile via CSS) -->
     <div class="mobile-profile-badge">
-      <img src="Sajad.png" alt="Sajad" class="mobile-exp-img">
+      <img src="Sajad.png" alt="Sajad" class="mobile-exp-img" loading="lazy">
       <div class="mobile-social-icons">
-        <a href="https://www.linkedin.com/in/sajad-ahamed-851b39261" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/ahamed-sajad" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sajad-ahamed-851b39261" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/ahamed-sajad" target="_blank" aria-label="GitHub" rel="noopener"><i class="fa-brands fa-github"></i></a>
         <a href="mailto:mr.sajadahamed.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://wa.me/94768011651" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://wa.me/94768011651" target="_blank" aria-label="WhatsApp" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
 
@@ -90,12 +100,12 @@
 
     <!-- Desktop badge (hidden on mobile via CSS) -->
     <div class="experience-badge clean-badge">
-      <img src="Sajad.png" alt="Profile" class="exp-img">
+      <img src="Sajad.png" alt="Profile" class="exp-img" loading="lazy">
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/sajad-ahamed-851b39261" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/ahamed-sajad" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sajad-ahamed-851b39261" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/ahamed-sajad" target="_blank" aria-label="GitHub" rel="noopener"><i class="fa-brands fa-github"></i></a>
         <a href="mailto:mr.sajadahamed.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://wa.me/94768011651" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://wa.me/94768011651" target="_blank" aria-label="WhatsApp" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
   </section>
@@ -126,42 +136,42 @@
 <section class="services reveal" id="services">
   <div class="services-inner">
     <!-- 6 cards total -->
-    <div class="service-card">
+    <div class="service-card scroll-fade-in" data-delay="0">
       <div class="svc-icon"><i class="fa-solid fa-code"></i></div>
       <h3>Web<br>Development</h3>
       <p>Modern, fast, and secure websites and web apps built with clean code, SEO best practices, and scalable architectures.</p>
       <a href="#contact" class="get-link">Get a Service</a>
     </div>
 
-    <div class="service-card">
+    <div class="service-card scroll-fade-in" data-delay="100">
       <div class="svc-icon"><i class="fa-solid fa-pen-ruler"></i></div>
       <h3>UI/UX<br>Design</h3>
       <p>Human-centered interfaces, wireframes, and prototypes that improve usability and deliver delightful product experiences.</p>
       <a href="#contact" class="get-link">Get a Service</a>
     </div>
 
-    <div class="service-card">
+    <div class="service-card scroll-fade-in" data-delay="200">
       <div class="svc-icon"><i class="fa-solid fa-bullhorn"></i></div>
       <h3>Digital<br>Marketing</h3>
       <p>Performance-driven campaigns across social, search, and email to grow traffic, capture leads, and boost conversions.</p>
       <a href="#contact" class="get-link">Get a Service</a>
     </div>
 
-    <div class="service-card hidden">
+    <div class="service-card hidden scroll-fade-in" data-delay="300">
       <div class="svc-icon"><i class="fa-solid fa-palette"></i></div>
       <h3>Graphic<br>Design</h3>
       <p>Logos, brand kits, and visual assets that keep your brand consistent and memorable across all touchpoints.</p>
       <a href="#contact" class="get-link">Get a Service</a>
     </div>
 
-    <div class="service-card hidden">
+    <div class="service-card hidden scroll-fade-in" data-delay="400">
       <div class="svc-icon"><i class="fa-solid fa-film"></i></div>
       <h3>Video<br>Editing</h3>
       <p>Snappy edits, motion graphics, and short-form content optimized for social media and marketing campaigns.</p>
       <a href="#contact" class="get-link">Get a Service</a>
     </div>
 
-    <div class="service-card hidden">
+    <div class="service-card hidden scroll-fade-in" data-delay="500">
       <div class="svc-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
       <h3>IT<br>Services</h3>
       <p>Systems setup, troubleshooting, automation, and tech support to keep your operations running smoothly.</p>
@@ -268,7 +278,7 @@
 
     <!-- LEFT IMAGE -->
     <div class="edu-image">
-      <img src="3.png" alt="Education Image">
+      <img src="3.png" alt="Education Image" loading="lazy">
     </div>
 
     <!-- RIGHT EDUCATION LIST -->
@@ -324,25 +334,25 @@
     <div class="tech-scroll-wrapper">
       <div class="tech-scroll">
         <!-- First set of icons -->
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><span>Figma</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva"><span>Canva</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Adobe"><span>Adobe</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" loading="lazy"><span>Figma</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy"><span>HTML</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy"><span>CSS</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy"><span>JavaScript</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy"><span>Python</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy"><span>Java</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" loading="lazy"><span>Canva</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Adobe" loading="lazy"><span>Adobe</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" loading="lazy"><span>GitHub</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy"><span>MySQL</span></div>
         <div class="tech-icon"><i class="fa-solid fa-file-word"></i><span>MS Office</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress"><span>WordPress</span></div>
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy"><span>React</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy"><span>Node.js</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" loading="lazy"><span>MongoDB</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" loading="lazy"><span>WordPress</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" loading="lazy"><span>Bootstrap</span></div>
         
         <!-- Duplicate set for seamless loop -->
-        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><span>Figma</span></div>
+        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" loading="lazy"><span>Figma</span></div>
         <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></div>
         <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span></div>
         <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>

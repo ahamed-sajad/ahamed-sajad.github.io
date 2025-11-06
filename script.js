@@ -1,4 +1,40 @@
 // ------------------------------
+// PERFORMANCE OPTIMIZATION
+// ------------------------------
+// Debounce function for scroll events
+function debounce(func, wait = 10) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Passive event listeners for better scroll performance
+const passiveSupported = (() => {
+  let supported = false;
+  try {
+    const options = {
+      get passive() {
+        supported = true;
+        return false;
+      }
+    };
+    window.addEventListener('test', null, options);
+    window.removeEventListener('test', null, options);
+  } catch (err) {
+    supported = false;
+  }
+  return supported;
+})();
+
+const eventOptions = passiveSupported ? { passive: true } : false;
+
+// ------------------------------
 // LOADING SCREEN
 // ------------------------------
 window.addEventListener('load', () => {
@@ -102,6 +138,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.3 });
 
     io.observe(typingElement);
+  })();
+
+  // ------------------------------
+  // Scroll Fade-In Animation for Cards
+  // ------------------------------
+  (function () {
+    const fadeElements = document.querySelectorAll('.scroll-fade-in');
+    if (!fadeElements.length || !('IntersectionObserver' in window)) return;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => io.observe(el));
   })();
 
   // ------------------------------
