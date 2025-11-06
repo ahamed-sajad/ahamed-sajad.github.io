@@ -473,8 +473,8 @@ html{
     padding: 14px 20px 12px;           /* reduced top and bottom padding */
   }
   .cta-text {
-    font-size: 15px;                   /* increased from 14px */
-    line-height: 1.4;                  /* slightly looser for readability */
+    font-size: 20px;                   /* increased for better mobile readability */
+    line-height: 1.45;                 /* slightly looser for readability */
     margin-top: 8px;                   /* push text down from top */
     margin-bottom: 10px;               /* gap between text and button */
   }
