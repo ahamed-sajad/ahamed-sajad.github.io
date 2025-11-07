@@ -55,15 +55,15 @@ const eventOptions = passiveSupported ? { passive: true } : false;
 window.addEventListener('load', () => {
   const loadingScreen = document.getElementById('loadingScreen');
   
-  // Show loading screen for 1 second
+  // Show loading screen for 500ms for faster experience
   setTimeout(() => {
     loadingScreen.classList.add('hidden');
     
     // Remove from DOM after fade-out
     setTimeout(() => {
       loadingScreen.remove();
-    }, 600);
-  }, 1000);
+    }, 400);
+  }, 500);
 });
 
 // Prevent scrolling during loading
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   setTimeout(() => {
     document.body.style.overflow = '';
-  }, 1600);
+  }, 900);
 });
 
 // ------------------------------

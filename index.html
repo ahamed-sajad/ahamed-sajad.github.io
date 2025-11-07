@@ -19,6 +19,11 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <!-- Preload critical images for faster LCP -->
+  <link rel="preload" as="image" href="2.png">
+  <link rel="preload" as="image" href="1.png">
+  <link rel="preload" as="image" href="sajadahamed.png">
+
   <!-- Critical CSS (inline minimal styles for above-the-fold content) -->
   <style>
     body{margin:0;font-family:system-ui,-apple-system,sans-serif;overflow-x:hidden}
@@ -85,10 +90,10 @@
     <!-- Hero images -->
     <div class="hero-images">
       <div class="image-box left">
-        <img src="2.png" alt="Tech Marketing Image" loading="lazy">
+        <img src="2.png" alt="Tech Marketing Image" width="500" height="500" fetchpriority="high">
       </div>
       <div class="image-box right">
-        <img src="1.png" alt="AI Concept Image" loading="lazy">
+        <img src="1.png" alt="AI Concept Image" width="500" height="500" fetchpriority="high">
       </div>
     </div>
 

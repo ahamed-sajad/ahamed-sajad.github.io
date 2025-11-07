@@ -1,5 +1,5 @@
 // Service Worker for Caching - Offline Support & Speed
-const CACHE_NAME = 'sajad-portfolio-v1';
+const CACHE_NAME = 'sajad-portfolio-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -11,7 +11,7 @@ const urlsToCache = [
   '/1.png',
   '/2.png',
   '/3.png',
-  '/Sajad.png'
+  '/sajad.jpg'
 ];
 
 // Install Service Worker
