@@ -190,6 +190,7 @@ html{
   }
 }
 
+/* Waving hand emoji animation */
 /* ===== HERO IMAGES ===== */
 .hero-images{
   display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:40px;
@@ -345,12 +346,19 @@ html{
   .nav-links{
     position:fixed; inset:0 0 0 auto; width:75%; max-width:320px;
     background:#e9edf0; box-shadow:-20px 0 50px rgba(0,0,0,.15);
-    transform:translateX(100%); transition:transform .25s ease;
+    transform:translateX(100%); 
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .25s ease, opacity .25s ease, visibility .25s ease;
     display:flex; flex-direction:column; gap:18px; padding:90px 24px 24px;
     z-index: 9999;
   }
   .nav-links a{ font-size:16px; }
-  .nav-links.open{ transform:translateX(0); }
+  .nav-links.open{ 
+    transform:translateX(0); 
+    opacity: 1;
+    visibility: visible;
+  }
 
   /* mobile CTA inside panel */
   .nav-cta-mobile{ display:inline-block; margin-top:8px; }
@@ -963,7 +971,7 @@ html{
 /* Card */
 .service-card{
   position:relative;
-  background:#fff;
+  background: #fff;
   border:1px solid #e7ecef;
   border-radius:28px;
   padding:32px 28px 28px;
