@@ -26,8 +26,12 @@
 
   <!-- Critical CSS (inline minimal styles for above-the-fold content) -->
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,sans-serif;overflow-x:hidden}
+    body{margin:0;font-family:system-ui,-apple-system,sans-serif;overflow-x:hidden;background:#f9fafb}
     .loading-screen{position:fixed;top:0;left:0;width:100%;height:100vh;background:#fff;display:flex;align-items:center;justify-content:center;z-index:99999}
+    header{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000}
+    .hero{padding:60px 20px;max-width:1200px;margin:0 auto}
+    .hero h1{font-size:48px;font-weight:700;margin:0 0 12px;color:#0a3c50}
+    .hero p{font-size:18px;color:#5a6c7a;margin:0}
   </style>
 
   <!-- CSS - Load critical styles first -->
@@ -90,16 +94,16 @@
     <!-- Hero images -->
     <div class="hero-images">
       <div class="image-box left">
-        <img src="2.png" alt="Tech Marketing Image" width="500" height="500" fetchpriority="high">
+        <img src="2.png" alt="Tech Marketing Image" width="500" height="500" fetchpriority="high" decoding="async">
       </div>
       <div class="image-box right">
-        <img src="1.png" alt="AI Concept Image" width="500" height="500" fetchpriority="high">
+        <img src="1.png" alt="AI Concept Image" width="500" height="500" fetchpriority="high" decoding="async">
       </div>
     </div>
 
     <!-- Mobile oval badge (shown only on mobile via CSS) -->
     <div class="mobile-profile-badge">
-      <img src="sajad.jpg" alt="Sajad" class="mobile-exp-img" loading="lazy">
+      <img src="sajad.jpg" alt="Sajad" class="mobile-exp-img" width="120" height="120" loading="lazy" decoding="async">
       <div class="mobile-social-icons">
         <a href="https://www.linkedin.com/in/sajad-ahamed-851b39261" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://github.com/ahamed-sajad" target="_blank" aria-label="GitHub" rel="noopener"><i class="fa-brands fa-github"></i></a>
@@ -122,7 +126,7 @@
 
     <!-- Desktop badge (hidden on mobile via CSS) -->
     <div class="experience-badge clean-badge">
-      <img src="sajad.jpg" alt="Profile" class="exp-img" loading="lazy">
+      <img src="sajad.jpg" alt="Profile" class="exp-img" width="180" height="180" loading="lazy" decoding="async">
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/sajad-ahamed-851b39261" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://github.com/ahamed-sajad" target="_blank" aria-label="GitHub" rel="noopener"><i class="fa-brands fa-github"></i></a>
@@ -300,7 +304,7 @@
 
     <!-- LEFT IMAGE -->
     <div class="edu-image">
-      <img src="3.png" alt="Education Image" loading="lazy">
+      <img src="3.png" alt="Education Image" width="600" height="600" loading="lazy" decoding="async">
     </div>
 
     <!-- RIGHT EDUCATION LIST -->
